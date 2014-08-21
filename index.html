@@ -40,7 +40,7 @@
               <tr><td>Bike</td><td>330</td><td>240</td><td>1</td></tr>
               <tr><td>Plane</td><td>430</td><td>540</td><td>3</td></tr>
               <tr><td>Yacht</td><td>100</td><td>200</td><td>0</td></tr>
-              <tr><td>Segway</td><td>330</td><td>240</td><td>1</td></tr>
+              <tr><td class="edit-disabled">Segway <- Editing disabled</td><td>330</td><td>240</td><td>1</td></tr>
             </tbody>
 			<tfoot><tr><th><strong>TOTAL</strong></th><th></th><th></th><th></th></tr></thead>
           </table>
@@ -97,6 +97,11 @@ $('table td').on('change', function(evt, newValue) {
 		return false; // reject change
 	}
 });
+</pre>
+
+<p>Disable editing on some cells by adding a class to them</p>
+<pre class="prettyprint">
+$('#table').editableTableWidget({disableClass: "edit-disabled"});
 </pre>
     </div>
     <div class="span6" >
